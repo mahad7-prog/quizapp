@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div id="modalAskingName">
+        <label for="nameOfUser"class="labels"   style="padding: 0px 10px;">User name: </label>
+        <input type="text" id="nameOfUser" class="input" />
+        <label for="fatherName" class="labels"  style="padding: 0px 10px;">Father name : </label>
+        <input type="text" id="fatherName" class="input" />
+        <label for="idOfUser"  class="labels" style="padding: 0px 10px;">Id : </label>
+        <input type="text" id="idOfUser" class="input" />
+        <button  class="button" onclick="gettingData()">Save Data !</button>
+      </div>
+
+      <div id="hide" class="flex">
+        <button id="startButton" onclick="renderQuestions()">Start</button>
+        
+        <button  class="butto" id="restartButton" onclick="restartQuestions()">Restart</button>
+        <!-- <button id="restartButton" onclick="restartQuestions()">Retry</button> -->
+        <div id="main">
+          <p>Click Start to begin the quiz!</p>
+          <div id="timer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="popupModal" class="modal">
+      <div class="modal-content">
+        <p id="modalMessage">Message goes here</p>
+        <button id="ok-button" onclick="closeModal()">OK</button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
